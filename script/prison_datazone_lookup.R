@@ -75,7 +75,8 @@ data_zone_prison %>%
   select(data_zone, prison) %>% 
   mutate(has_prison = if_else(is.na(prison), 0, 1))
 
-# export
+
+# save file as csv --------------------------------------------------------
 
 write_csv(data_zone_prison,
           here("data", "data_zone_prison.csv"))
